@@ -1,4 +1,9 @@
 {
+  "env": {
+    "es6": true,
+    "browser": true,
+    "es2021": true
+  },
   "parser": "@typescript-eslint/parser",
   "extends": [
     "standard-with-typescript",
@@ -9,9 +14,14 @@
     "plugin:react/recommended"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "ecmaFeatures": {
+      "jsx": true // Allows for the parsing of JSX
+    },
+    "ecmaVersion": 12,
+    "project": "./tsconfig.json",
+    "sourceType": "module"
   },
-  "plugins": ["react-hooks", "react"],
+  "plugins": ["react-hooks", "react", "prettier"],
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/camelcase": "off",
@@ -43,5 +53,10 @@
         "endOfLine": "auto"
       }
     ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    }
   }
 }
