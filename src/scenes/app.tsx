@@ -2,8 +2,8 @@ import React from 'react';
 import { Layout } from 'antd';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Header from '../components/layout/header/header';
-import Footer from '../components/layout/footer/footer';
+import Header from 'components/layout/header/header';
+import Footer from 'components/layout/footer/footer';
 import Home from './home/home';
 import Library from './library/library';
 import Gallery from './gallery/gallery';
