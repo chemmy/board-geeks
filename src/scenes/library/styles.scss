@@ -1,0 +1,17 @@
+@import 'styles/variables.scss';
+
+.page-library {
+  .page-content {
+    display: flex;
+
+    .filter-section {
+      flex: 1 1 30%;
+      border-right: 1px solid $borderColor;
+      background-color: rgba($color: $primaryColor, $alpha: 0.1);
+    }
+
+    .items-section {
+      flex: 1 1 70%;
+    }
+  }
+}

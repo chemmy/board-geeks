@@ -21,8 +21,12 @@ code {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.ant-layout-content {
+.App .ant-layout-content {
   background: white;
-  padding: 50px;
   margin-top: 72px;
+  color: $primaryFontColor;
+
+  .page-content {
+    padding: 50px;
+  }
 }

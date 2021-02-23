@@ -1,9 +1,14 @@
 $primaryColor: #001529;
 $secondaryColor: red;
 
-$primaryFontColor: #000;
+$primaryFontColor: $primaryColor;
 $reverseFontColor: rgba(
   $color: white,
   $alpha: 0.75,
 );
 $emphasizedReverseFontColor: white;
+
+$borderColor: rgba(
+  $color: $primaryColor,
+  $alpha: 0.5,
+);
