@@ -13,7 +13,7 @@ const PageHeader = ({ headerImage, pageTitle, opacity }: PageHeaderProps): React
   };
 
   return (
-    <div className="page-header">
+    <div className="bg-page-header">
       <img className="background-image" src={headerImage} />
       <h2 className="page-title">{pageTitle}</h2>
       <div className="overlay" style={getOverlayOpacity()} />

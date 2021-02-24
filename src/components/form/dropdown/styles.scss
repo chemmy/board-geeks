@@ -1,0 +1,29 @@
+@import 'styles/variables.scss';
+
+.bg-dropdown {
+  display: flex;
+  align-items: center;
+
+  .field-label {
+    flex: 1 1 30%;
+  }
+
+  .ant-select.ant-select-single {
+    flex: 1 1 70%;
+
+    &:hover {
+      border-color: $fieldBorderColor;
+
+      .ant-select-selector {
+        border-color: $fieldBorderColor;
+      }
+    }
+
+    &.ant-select-focused {
+      .ant-select-selector {
+        border-color: $fieldBorderColor;
+        box-shadow: none;
+      }
+    }
+  }
+}

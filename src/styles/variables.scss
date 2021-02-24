@@ -1,6 +1,8 @@
 $primaryColor: #001529;
 $secondaryColor: red;
 
+// FONTS
+
 $primaryFontColor: $primaryColor;
 $reverseFontColor: rgba(
   $color: white,
@@ -8,7 +10,17 @@ $reverseFontColor: rgba(
 );
 $emphasizedReverseFontColor: white;
 
+// SECTIONS and PANELS
+
 $borderColor: rgba(
   $color: $primaryColor,
   $alpha: 0.5,
 );
+$highlightColor: rgba(
+  $color: $primaryColor,
+  $alpha: 0.1,
+);
+
+// FORMS and FIELDS
+
+$fieldBorderColor: #d9d9d9;

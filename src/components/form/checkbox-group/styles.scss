@@ -1,0 +1,28 @@
+@import 'styles/variables.scss';
+
+.bg-checkbox-group {
+  .ant-checkbox-input {
+    + .ant-checkbox-inner {
+      border-color: $fieldBorderColor;
+    }
+
+    &:focus {
+      + .ant-checkbox-inner {
+        border-color: $fieldBorderColor;
+      }
+    }
+
+    &:hover {
+      + .ant-checkbox-inner {
+        border-color: $primaryColor;
+      }
+    }
+  }
+
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+}

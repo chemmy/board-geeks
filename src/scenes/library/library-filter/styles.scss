@@ -1,3 +1,25 @@
 .library-filter {
   padding: 20px;
+
+  .filter-header {
+    margin-bottom: 16px;
+  }
+
+  .filters {
+    .filter-groups {
+      > div {
+        margin-bottom: 8px;
+      }
+
+      &.main-filters {
+        margin-bottom: 32px;
+      }
+
+      &.secondary-filters {
+        > div {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
 }
