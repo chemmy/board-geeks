@@ -30,3 +30,21 @@ code {
     padding: 50px;
   }
 }
+
+.ant-select-dropdown {
+  .ant-select-item-option-selected {
+    background-color: $highlightColor;
+
+    .ant-select-item-option {
+      &-content {
+        font-weight: lighter;
+      }
+
+      &-state {
+        svg {
+          fill: $secondaryColor;
+        }
+      }
+    }
+  }
+}

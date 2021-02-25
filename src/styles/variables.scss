@@ -4,11 +4,11 @@ $secondaryColor: red;
 // FONTS
 
 $primaryFontColor: $primaryColor;
-$reverseFontColor: rgba(
+$reverseFontColor: white;
+$dimmedReverseFontColor: rgba(
   $color: white,
   $alpha: 0.75,
 );
-$emphasizedReverseFontColor: white;
 
 // SECTIONS and PANELS
 

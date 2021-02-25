@@ -1,21 +1,26 @@
 import React from 'react';
-import { InputNumber } from 'antd';
+import { DefaultNumberType } from 'types/input';
+import NumericInput from 'components/form/numeric-input/numeric-input';
 import './styles.scss';
 
 interface IntegerRangeProps {
   label?: string;
+  from: DefaultNumberType;
+  to: DefaultNumberType;
+  setFrom: (value: DefaultNumberType) => void;
+  setTo: (value: DefaultNumberType) => void;
   separator?: string;
 }
 
-const IntegerRange = ({ label, separator = '-' }: IntegerRangeProps) => {
+const IntegerRange = ({ label, from, to, setFrom, setTo, separator = '-' }: IntegerRangeProps) => {
   return (
     <div className="bg-integer-range">
       <div className="field-label">{label}</div>
 
       <div className="range-group">
-        <InputNumber min={0} />
+        <NumericInput value={from} hideSpinner onChange={setFrom} />
         <span className="range-separator">{separator}</span>
-        <InputNumber min={0} />
+        <NumericInput value={to} hideSpinner onChange={setTo} />
       </div>
     </div>
   );

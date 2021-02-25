@@ -6,6 +6,8 @@
   }
 
   .filters {
+    margin-bottom: 32px;
+
     .filter-groups {
       > div {
         margin-bottom: 8px;
@@ -19,6 +21,22 @@
         > div {
           margin-bottom: 12px;
         }
+      }
+    }
+  }
+
+  .filter-action {
+    display: flex;
+
+    > div {
+      flex: 1 1 auto;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 4px;
       }
     }
   }

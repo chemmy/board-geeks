@@ -12,25 +12,12 @@
     display: flex;
     align-items: center;
 
+    .ant-input-number {
+      width: 60px;
+    }
+
     .range-separator {
       margin: 0 4px;
-    }
-  }
-
-  .ant-input-number {
-    width: 60px;
-
-    &.-input {
-      width: 100%;
-    }
-
-    &.ant-input-number-focused {
-      border-color: $fieldBorderColor;
-      box-shadow: none !important;
-    }
-
-    &:hover {
-      border-color: $fieldBorderColor;
     }
   }
 }

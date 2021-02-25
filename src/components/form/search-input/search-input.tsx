@@ -4,10 +4,22 @@ import './styles.scss';
 
 const { Search } = Input;
 
-const SearchInput = () => {
+interface SearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  onSearch: () => void;
+}
+
+const SearchInput = ({ value, onSearch, onChange }: SearchInputProps) => {
   return (
     <div className="bg-search-input">
-      <Search placeholder="Search" />
+      <Search
+        placeholder="Search"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        onSearch={onSearch}
+        onPressEnter={onSearch}
+      />
     </div>
   );
 };

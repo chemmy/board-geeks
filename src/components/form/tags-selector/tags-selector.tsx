@@ -1,16 +1,18 @@
 import React from 'react';
 import { Select } from 'antd';
-import { OptionType } from 'types/common';
+import { OptionType, OptionValueType } from 'types/options';
 import './styles.scss';
 
 const { Option } = Select;
 
 interface TagsSelectorProps {
   label?: string;
+  value: OptionValueType[];
   options: OptionType[];
+  onChange: (selected: OptionValueType[]) => void;
 }
 
-const TagsSelector = ({ label, options }: TagsSelectorProps) => {
+const TagsSelector = ({ label, value, options, onChange }: TagsSelectorProps) => {
   const getOptionsList = () => {
     return (
       <>
@@ -27,7 +29,9 @@ const TagsSelector = ({ label, options }: TagsSelectorProps) => {
     <div className="bg-tags-selector">
       <div className="field-label">{label}</div>
 
-      <Select mode="tags">{getOptionsList()}</Select>
+      <Select mode="tags" value={value} onChange={onChange}>
+        {getOptionsList()}
+      </Select>
     </div>
   );
 };

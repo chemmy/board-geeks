@@ -1,0 +1,52 @@
+@import 'styles/variables.scss';
+
+.bg-button {
+  .ant-btn {
+    width: 100%;
+    color: $primaryColor;
+    border-color: $fieldBorderColor;
+
+    &:hover {
+      color: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+
+  &.primary {
+    .ant-btn {
+      background-color: $primaryColor;
+      color: $reverseFontColor;
+    }
+
+    &.reversed {
+      .ant-btn {
+        background-color: transparent;
+        border-color: $primaryColor;
+        color: $primaryColor;
+
+        &:hover {
+          box-shadow: 0 0 5px 1px rgba($color: $primaryColor, $alpha: 0.2);
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    .ant-btn {
+      background-color: $secondaryColor;
+      color: $reverseFontColor;
+    }
+
+    &.reversed {
+      .ant-btn {
+        background-color: transparent;
+        border-color: $secondaryColor;
+        color: $secondaryColor;
+
+        &:hover {
+          box-shadow: 0 0 5px 1px rgba($color: $secondaryColor, $alpha: 0.2);
+        }
+      }
+    }
+  }
+}

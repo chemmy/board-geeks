@@ -26,17 +26,3 @@
     }
   }
 }
-
-.ant-select-dropdown {
-  .ant-select-item {
-    &-option-selected {
-      background-color: $highlightColor;
-
-      .ant-select-item-option-state {
-        svg {
-          fill: $secondaryColor;
-        }
-      }
-    }
-  }
-}

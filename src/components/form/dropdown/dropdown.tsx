@@ -1,17 +1,19 @@
 import React from 'react';
 import { Select } from 'antd';
-import { OptionType, OptionValueType } from 'types/common';
+import { OptionType, OptionValueType } from 'types/options';
 import './styles.scss';
 
 const { Option } = Select;
 
 interface DropdownProps {
   label?: string;
+  value: string | number | undefined;
   options: OptionType[];
   defaultValue?: OptionValueType;
+  onChange: (selected: OptionValueType) => void;
 }
 
-const Dropdown = ({ label, options, defaultValue }: DropdownProps) => {
+const Dropdown = ({ label, value, options, defaultValue, onChange }: DropdownProps) => {
   const getOptionsList = () => {
     return (
       <>
@@ -28,7 +30,9 @@ const Dropdown = ({ label, options, defaultValue }: DropdownProps) => {
     <div className="bg-dropdown">
       <div className="field-label">{label}</div>
 
-      <Select defaultValue={defaultValue}>{getOptionsList()}</Select>
+      <Select value={value} defaultValue={defaultValue} onChange={onChange}>
+        {getOptionsList()}
+      </Select>
     </div>
   );
 };

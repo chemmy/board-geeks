@@ -16,17 +16,17 @@
     .ant-menu-item {
       height: 72px;
       padding: 4px 20px;
-      color: $reverseFontColor;
+      color: $dimmedReverseFontColor;
 
       &-selected {
         background: none;
         border-bottom: 4px solid $secondaryColor;
-        color: $emphasizedReverseFontColor;
+        color: $reverseFontColor;
       }
 
       &:hover {
         background: none;
-        color: $emphasizedReverseFontColor;
+        color: $reverseFontColor;
       }
     }
   }
